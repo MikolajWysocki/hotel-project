@@ -1,4 +1,0 @@
-mysql-connector-python
-mysql.connector
-http.server
-json

@@ -1,0 +1,10 @@
+name: hotel-project
+
+services:
+ web:
+  build: #dodać Dockerfile frontendu!!!
+  ports: #dodać porty
+ api:
+  build: ./backend
+  ports: #dodać porty
+ db: #dodać bazę!!!

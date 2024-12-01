@@ -16,7 +16,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
             self.send_error(404, 'Endpoint not found')
 
     def do_POST(self):
-        if self.path == '/api/data':
+        if self.path == 'PATH':
             # Pobieranie długości danych z nagłówków
             content_length = int(self.headers['Content-Length'])
             # Wczytywanie i dekodowanie JSON-a

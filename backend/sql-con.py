@@ -3,7 +3,7 @@ import mysql.connector
 # Konfiguracja połączenia
 db_config = {
     'host': 'localhost',     # Adres serwera MySQL
-    'user': 'marek-towarek', # Nazwa użytkownika
+    'user': 'marektowarek', # Nazwa użytkownika
     'password': 'marek1234', # Hasło użytkownika
     'database': 'hotel-db'   # Nazwa bazy danych
 }
