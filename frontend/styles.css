@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1, h2 {
+    color: #00509e;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form select, form button {
+    margin-top: 5px;
+    display: block;
+}
+
+form input, form select {
+    padding: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #00509e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003f7e;
+}
+
+#price-display {
+    margin-top: 20px;
+    background-color: #e9f7ff;
+    border: 1px solid #b3d9ff;
+    padding: 15px;
+    border-radius: 5px;
+}
