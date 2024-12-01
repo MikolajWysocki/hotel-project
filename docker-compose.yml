@@ -2,9 +2,9 @@ name: hotel-project
 
 services:
  web:
-  build: #dodać Dockerfile frontendu!!!
+  build: #dodać Dockerfile frontendu
   ports: #dodać porty
  api:
-  build: ./backend
+  build: ./backend/Dockerfile
   ports: #dodać porty
- db: #dodać bazę!!!
+ db: #dodać bazę
