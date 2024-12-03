@@ -1,10 +1,31 @@
 name: hotel-project
 
 services:
- web:
-  build: #dodać Dockerfile frontendu
-  ports: #dodać porty
- api:
-  build: ./backend/Dockerfile
-  ports: #dodać porty
- db: #dodać bazę
+  web:
+    image: nginx
+    ports:
+      - "5001:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html
+    restart: always
+    networks:
+      - default
+  api:
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile
+    ports:
+      - "7000:7000"
+    networks:
+      - default
+  mysql:
+    image: "mysql:latest"
+    expose:
+      - 6000
+    environment:
+      MYSQL_USER: "marektowarek"
+      MYSQL_PASSWORD: "marek1234"
+      MYSQL_DATABASE: "hotel-db"
+      MYSQL_ROOT_PASSWORD: "1234"
+    networks:
+      - default

@@ -4,7 +4,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
-        if self.path == 'PATH':
+        if self.path == 'C:/Users/mikol/Desktop/hotel-project/frontend/data': # tutaj to /data zmienić na nazwę pliku ("data" to placeholder)
             # Ustawienia nagłówków odpowiedzi
             self.send_response(200)
             self.send_header('Content-type', 'application/json')
@@ -16,7 +16,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
             self.send_error(404, 'Endpoint not found')
 
     def do_POST(self):
-        if self.path == 'PATH':
+        if self.path == 'C:/Users/mikol/Desktop/hotel-project/frontend/data': # tutaj to /data zmienić na nazwę pliku ("data" to placeholder)
             # Pobieranie długości danych z nagłówków
             content_length = int(self.headers['Content-Length'])
             # Wczytywanie i dekodowanie JSON-a
@@ -37,7 +37,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 
 
 # Uruchamianie serwera HTTP
-def run(server_class=HTTPServer, handler_class=SimpleHTTPRequestHandler, port=8000):
+def run(server_class=HTTPServer, handler_class=SimpleHTTPRequestHandler, port=7000):
     server_address = ('', port)
     httpd = server_class(server_address, handler_class)
     print(f'Server running on port {port}...')
