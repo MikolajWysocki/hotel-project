@@ -6,6 +6,6 @@ COPY . .
 
 RUN pip install -r ./requirements.txt
 
-EXPOSE 9000
+EXPOSE 5000
 
-CMD [ "python3", "http-con.py" ]
+CMD [ "python3", "flask_con.py" ]
